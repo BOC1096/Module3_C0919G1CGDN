@@ -1,0 +1,59 @@
+.row.header {
+    height: auto;
+}
+
+#container {
+    width: 100%;
+    height: auto;
+    margin-left: 3em;
+    background: grey;
+}
+
+.row {
+    margin-top: 1em;
+    border: solid 2px;
+    border-radius: 1em;
+    width: 90%;
+    margin-left: 1em;
+    background: white;
+}
+
+#droppable {
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px;
+}
+
+#draggable {
+    width: 100px;
+    height: 100px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px 10px 10px 0;
+}
+
+#resizable {
+    width: 150px;
+    height: 150px;
+    padding: 0.5em;
+}
+
+#resizable h3 {
+    text-align: center;
+    margin: 0;
+}
+
+#feedback {
+    font-size: 1.4em;
+}
+
+#selectable .ui-selecting {
+    background: #FECA40;
+}
+
+#selectable .ui-selected {
+    background: #F39814;
+    color: white;
+}

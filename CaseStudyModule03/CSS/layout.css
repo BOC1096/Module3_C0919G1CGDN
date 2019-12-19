@@ -1,0 +1,87 @@
+.btn-outline-success.my-2.my-sm-0 {
+    margin-left: 1em;
+}
+
+.carousel-inner>div img,
+.carousel-inner>a>img {
+    width: 100%;
+    margin: auto;
+    height: 25%;
+    display: flex;
+}
+
+.nav-item.active a {
+    border-color: darkblue;
+    color: darkblue;
+}
+
+button.btn.btn-outline-success.my-2.my-sm-0:hover {
+    background-color: darkblue;
+    border-color: darkblue;
+    color: white;
+}
+
+a.btn-outline-success.my-2.my-sm-0:hover {
+    background-color: darkblue;
+    border-color: darkblue;
+    color: white;
+}
+
+a.btn-outline-success.my-2.my-sm-0,
+.btn-outline-success {
+    border-color: darkblue;
+    color: darkblue;
+}
+
+a.carousel-control-prev,
+a.carousel-control-next {
+    background: whitesmoke;
+    width: 7%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 3em;
+    height: 3em;
+}
+
+input[type=text] {
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin-left: 1em;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+input[type=text]:focus {
+    border-color: darkblue;
+    box-shadow: 0 0 4px 0 darkblue;
+}
+
+.inputWithIcon input[type=text] {
+    padding-left: 40px;
+}
+
+.inputWithIcon {
+    position: relative;
+    margin-left: 1em;
+}
+
+div.inputWithIcon i {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    padding: 20px 8px;
+    color: #aaa;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230067' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%230067' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}

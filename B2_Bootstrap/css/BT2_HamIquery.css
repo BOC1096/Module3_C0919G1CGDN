@@ -1,0 +1,10 @@
+.content {
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 20px;
+    margin: 15px 0;
+    border: 1px solid rgba( 0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #eee;
+    position: relative;
+}

@@ -10,10 +10,10 @@ export class CaculatorComponent implements OnInit {
   number1: number;
   number2: number;
   result: number;
-  operator = "+";
+  operator = '+';
 
   checkKey(event) {
-    if (event.keyCode == 101) {
+    if (event.keyCode === 101) {
       event.preventDefault();
     }
   }

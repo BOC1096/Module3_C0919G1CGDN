@@ -10,7 +10,6 @@ export class FontSizeEdittorComponent implements OnInit {
   onChange(value) {
     this.fontSize = value;
   }
-  
   constructor() { }
 
   ngOnInit() {

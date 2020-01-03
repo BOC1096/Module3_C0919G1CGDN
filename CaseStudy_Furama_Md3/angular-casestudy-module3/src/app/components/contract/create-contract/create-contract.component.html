@@ -11,7 +11,7 @@
             <div class="modal-body mx-3">
                 <div class="md-form mb-6">
                     <!-- <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon> -->
-                    <input type="date" id="start" formControlName="start" class="form-control" mdbInput mdbValidate>
+                    <input type="date" id="start" formControlName="start" (change)="onTotal()" [(ngModel)]="start" class="form-control" mdbInput mdbValidate>
                     <label for="start">Ngày bắt đầu</label>
                     <ng-container *ngFor="let validation of validation_messages.start">
                         <mdb-error *ngIf="formCreate.get('start').hasError(validation.type) && (formCreate.get('start').dirty || formCreate.get('start').touched)">
@@ -24,7 +24,7 @@
 
                 <div class="md-form mb-6">
                     <!-- <mdb-icon fas icon="lock" class="prefix grey-text"></mdb-icon> -->
-                    <input type="date" id="end" formControlName="end" class="form-control" mdbInput mdbValidate>
+                    <input type="date" id="end" formControlName="end" (change)="onTotal()" [(ngModel)]="end" class="form-control" mdbInput mdbValidate>
                     <label for="end">Ngày kết thúc</label>
                     <ng-container *ngFor="let validation of validation_messages.end">
                         <mdb-error *ngIf="formCreate.get('end').hasError(validation.type) && (formCreate.get('end').dirty || formCreate.get('end').touched)">
@@ -34,7 +34,7 @@
                     <mdb-success *ngIf="formCreate.get('end').valid && (formCreate.get('end').dirty || formCreate.get('end').touched)">
                     </mdb-success>
                 </div>
-                <div class="md-form mb-6">
+                <!-- <div class="md-form mb-6">
                     <input type="text" id="total" formControlName="total" class="form-control" mdbInput mdbValidate>
                     <label for="salary">Tiền đặt cọc</label>
                     <ng-container *ngFor="let validation of validation_messages.total">
@@ -45,7 +45,7 @@
                     <mdb-success *ngIf="formCreate.get('total').valid && (formCreate.get('total').dirty || formCreate.get('total').touched)">
                         Input valid
                     </mdb-success>
-                </div>
+                </div> -->
                 <div class="md-form mb-6">
                     <p>Khách hàng</p>
                     <select formControlName="customer">
@@ -60,10 +60,11 @@
                 </div>
                 <div class="md-form mb-6">
                     <p>Dịch vụ:</p>
-                    <select formControlName="service">
+                    <select formControlName="service" (change)="onTotal()" [(ngModel)]="service">
                     <option *ngFor="let item of services" [ngValue] ='item'>{{item.serviceName}}</option>
                   </select>
                 </div>
+                <h3>Tổng tiền: {{total}}</h3>
             </div>
             <div class="modal-footer d-flex justify-content-center">
                 <button [disabled]="formCreate.invalid" (click)="formCreate.valid? frame.hide(): frame.show()" type="submit" mdbBtn color="default" class="waves-light" mdbWavesEffect type="submit">Thêm</button>

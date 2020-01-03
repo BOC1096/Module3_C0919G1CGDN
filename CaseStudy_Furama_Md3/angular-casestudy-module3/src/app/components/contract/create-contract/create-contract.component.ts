@@ -16,7 +16,10 @@ import { Contract } from 'src/app/model/contract';
   styleUrls: ['./create-contract.component.scss']
 })
 export class CreateContractComponent implements OnInit {
-
+  total = 0;
+  service: Service = new Service();
+  end: Date;
+  start: Date;
 
   formCreate: FormGroup;
   employees: Array<Employee>;
@@ -38,10 +41,10 @@ export class CreateContractComponent implements OnInit {
     ]
   };
   constructor(private fb: FormBuilder,
-              private empService: EmployeeService,
-              private cusService: CustomerServiceService,
-              private furamaService: ServiceFuramaService,
-              private contractService: ContractService) { }
+    private empService: EmployeeService,
+    private cusService: CustomerServiceService,
+    private furamaService: ServiceFuramaService,
+    private contractService: ContractService) { }
 
   ngOnInit() {
     this.furamaService.getAllService().subscribe(
@@ -52,18 +55,13 @@ export class CreateContractComponent implements OnInit {
     );
     this.cusService.getAllCustomer().subscribe(
       data => this.customers = data
-    )
+    );
     this.formCreate = this.fb.group({
       start: ['', Validators.compose([
         Validators.required
       ])],
       end: ['', Validators.compose([
         Validators.required
-      ])],
-      total: ['', Validators.compose([
-        Validators.required,
-        Validators.pattern(/^[-+]?[0-9]*\.?[0-9]+$/),
-        numberValidator
       ])],
       customer: [],
       employee: [],
@@ -72,11 +70,18 @@ export class CreateContractComponent implements OnInit {
     }
     );
   }
+  onTotal() {
+    console.log('aa');
+    if (this.end != null && this.start != null && this.service != null) {
+      this.total = (this.service.price * (new Date(this.end).valueOf() - new Date(this.start).valueOf()) / (24 * 3600 * 1000));
+    }
+  }
   onSubmit(form) {
     if (this.formCreate.valid) {
+      console.log((new Date(form.end).valueOf() - new Date(form.start).valueOf()) / (24 * 3600 * 1000));
       this.contract.start = form.start;
       this.contract.end = form.end;
-      this.contract.total = form.total;
+      this.contract.total = (form.service.price * (new Date(form.end).valueOf() - new Date(form.start).valueOf()) / (24 * 3600 * 1000));
       this.contract.customer = form.customer;
       this.contract.employee = form.employee;
       this.contract.service = form.service;

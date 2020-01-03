@@ -18,6 +18,7 @@ export class DetailEmployeeComponent implements OnInit {
     console.log(this.id);
     this.service.getEmployee(this.id).subscribe(data => {
       this.employee = data;
+      console.log(this.employee.bitrhay);
     });
   }
 

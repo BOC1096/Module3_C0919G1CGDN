@@ -187,6 +187,486 @@
       },
       "status": true,
       "id": 2
+    },
+    {
+      "start": "2020-01-04",
+      "end": "2020-01-11",
+      "total": "1000000",
+      "customer": {
+        "id": 3,
+        "cusId": "KH-0003",
+        "cusName": "Nguyen Van B",
+        "cusType": "Gold",
+        "numberPhone": "0123123545",
+        "idCard": "98546574343",
+        "email": "lsdsad@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-17"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0002",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "10",
+        "price": "500",
+        "maxPerson": "3",
+        "status": false,
+        "id": 2
+      },
+      "status": true,
+      "id": 3
+    },
+    {
+      "start": "2020-01-04",
+      "end": "2020-01-19",
+      "total": "1000000",
+      "customer": {
+        "id": 1,
+        "cusId": "KH-0001",
+        "cusName": "Doan Linh",
+        "cusType": "Member",
+        "numberPhone": "0123123123",
+        "idCard": "123123123",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-19"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0001",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "3",
+        "price": "500",
+        "maxPerson": "2",
+        "id": 1,
+        "status": true
+      },
+      "status": true,
+      "id": 4
+    },
+    {
+      "start": "2020-01-19",
+      "end": "2020-01-19",
+      "total": "1000000",
+      "customer": {
+        "id": 2,
+        "cusId": "KH-0002",
+        "cusName": "Nguyen Van A",
+        "cusType": "Gold",
+        "numberPhone": "02323232323",
+        "idCard": "3233432432",
+        "email": "ldsa@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-04"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0001",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "3",
+        "price": "500",
+        "maxPerson": "2",
+        "id": 1,
+        "status": true
+      },
+      "status": true,
+      "id": 5
+    },
+    {
+      "start": "2020-01-04",
+      "end": "2020-01-25",
+      "total": "1000000",
+      "customer": {
+        "id": 2,
+        "cusId": "KH-0002",
+        "cusName": "Nguyen Van A",
+        "cusType": "Gold",
+        "numberPhone": "02323232323",
+        "idCard": "3233432432",
+        "email": "ldsa@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-04"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0002",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "10",
+        "price": "500",
+        "maxPerson": "3",
+        "status": false,
+        "id": 2
+      },
+      "status": true,
+      "id": 6
+    },
+    {
+      "start": "2020-01-04",
+      "end": "2020-01-26",
+      "total": "1000000",
+      "customer": {
+        "id": 2,
+        "cusId": "KH-0002",
+        "cusName": "Nguyen Van A",
+        "cusType": "Gold",
+        "numberPhone": "02323232323",
+        "idCard": "3233432432",
+        "email": "ldsa@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-04"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0002",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "10",
+        "price": "500",
+        "maxPerson": "3",
+        "status": false,
+        "id": 2
+      },
+      "status": true,
+      "id": 7
+    },
+    {
+      "start": "2020-01-05",
+      "end": "2020-01-18",
+      "total": "1000000",
+      "customer": {
+        "id": 3,
+        "cusId": "KH-0003",
+        "cusName": "Nguyen Van B",
+        "cusType": "Gold",
+        "numberPhone": "0123123545",
+        "idCard": "98546574343",
+        "email": "lsdsad@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-17"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0002",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "10",
+        "price": "500",
+        "maxPerson": "3",
+        "status": false,
+        "id": 2
+      },
+      "status": true,
+      "id": 8
+    },
+    {
+      "start": "2020-01-05",
+      "end": "2020-01-06",
+      "total": "1000000",
+      "customer": {
+        "id": 3,
+        "cusId": "KH-0003",
+        "cusName": "Nguyen Van B",
+        "cusType": "Gold",
+        "numberPhone": "0123123545",
+        "idCard": "98546574343",
+        "email": "lsdsad@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-17"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0001",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "3",
+        "price": "500",
+        "maxPerson": "2",
+        "id": 1,
+        "status": true
+      },
+      "status": true,
+      "id": 9
+    },
+    {
+      "start": "2020-01-11",
+      "end": "2020-01-19",
+      "total": "1000000",
+      "customer": {
+        "id": 2,
+        "cusId": "KH-0002",
+        "cusName": "Nguyen Van A",
+        "cusType": "Gold",
+        "numberPhone": "02323232323",
+        "idCard": "3233432432",
+        "email": "ldsa@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-04"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0001",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "3",
+        "price": "500",
+        "maxPerson": "2",
+        "id": 1,
+        "status": true
+      },
+      "status": true,
+      "id": 10
+    },
+    {
+      "start": "2018-06-14",
+      "end": "2020-01-03",
+      "total": 284000,
+      "customer": {
+        "id": 2,
+        "cusId": "KH-0002",
+        "cusName": "Nguyen Van A",
+        "cusType": "Gold",
+        "numberPhone": "02323232323",
+        "idCard": "3233432432",
+        "email": "ldsa@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-04"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0001",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "3",
+        "price": "500",
+        "maxPerson": "2",
+        "id": 1,
+        "status": true
+      },
+      "status": true,
+      "id": 11
+    },
+    {
+      "start": "2020-01-04",
+      "end": "2020-01-18",
+      "total": 7000,
+      "customer": {
+        "id": 3,
+        "cusId": "KH-0003",
+        "cusName": "Nguyen Van B",
+        "cusType": "Gold",
+        "numberPhone": "0123123545",
+        "idCard": "98546574343",
+        "email": "lsdsad@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-17"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0002",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "10",
+        "price": "500",
+        "maxPerson": "3",
+        "status": false,
+        "id": 2
+      },
+      "status": true,
+      "id": 12
+    },
+    {
+      "start": "2020-01-17",
+      "end": "2020-01-26",
+      "total": 4500,
+      "customer": {
+        "id": 3,
+        "cusId": "KH-0003",
+        "cusName": "Nguyen Van B",
+        "cusType": "Gold",
+        "numberPhone": "0123123545",
+        "idCard": "98546574343",
+        "email": "lsdsad@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-17"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0002",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "10",
+        "price": "500",
+        "maxPerson": "3",
+        "status": false,
+        "id": 2
+      },
+      "status": true,
+      "id": 13
+    },
+    {
+      "start": "2020-01-04",
+      "end": "2020-01-04",
+      "total": 0,
+      "customer": {
+        "id": 2,
+        "cusId": "KH-0002",
+        "cusName": "Nguyen Van A",
+        "cusType": "Gold",
+        "numberPhone": "02323232323",
+        "idCard": "3233432432",
+        "email": "ldsa@gmail.com",
+        "address": "Da Nang",
+        "birthday": "2020-01-23",
+        "bitrhay": "2020-01-04"
+      },
+      "employee": {
+        "empId": "NV-0002",
+        "empName": "Doan Van",
+        "salary": "7000000.00",
+        "numberPhone": "0912332333",
+        "idCard": "123123123223",
+        "email": "linh000boc@gmail.com",
+        "address": "Da Nang",
+        "bitrhay": "2020-01-18",
+        "id": 8
+      },
+      "service": {
+        "serviceId": "DV-0001",
+        "serviceName": "Villa",
+        "area": "100",
+        "numberFloor": "3",
+        "price": "500",
+        "maxPerson": "2",
+        "id": 1,
+        "status": true
+      },
+      "status": true,
+      "id": 14
     }
   ]
 }

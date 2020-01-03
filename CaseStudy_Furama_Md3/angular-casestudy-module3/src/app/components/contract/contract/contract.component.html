@@ -15,7 +15,7 @@
             <th scope="col">Ngày kết thúc</th>
             <th scope="col">Tên dịch vụ</th>
             <th scope="col">Tên khách hàng</th>
-            <th scope="col"></th>
+            <th scope="col">Tổng tiền</th>
         </tr>
     </thead>
     <tbody *ngFor="let cus of customerContracts | filter:search | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
@@ -25,6 +25,7 @@
             <td>{{cus.service.serviceName}}</td>
             <td>{{cus.customer.cusName}}</td>
             <td>
+                {{cus.total}}
                 <!-- <button type="button" mdbBtn type="button" color="red" (click)="delete(emp.id, emp.empName)">Xóa</button>
                 <button type="button" mdbBtn type="button" color="default" (click)="detail(emp.id)">Chi tiết</button>
                 <button type="button" mdbBtn type="button" color="default" (click)="edit(emp.id)">Sửa</button> -->

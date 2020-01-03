@@ -1,0 +1,115 @@
+<button id="add" type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample" (click)='frame.show(); reset()' mdbWavesEffect>Thêm khách hàng</button>
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form class="modal-content" [formGroup]="formCreate" (ngSubmit)=onSubmit(formCreate.value)>
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Thêm khách hàng</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-6">
+                    <!-- <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon> -->
+                    <input type="text" id="cusId" formControlName="cusId" class="form-control" mdbInput mdbValidate>
+                    <label for="cusId">Mã khách hàng</label>
+                    <ng-container *ngFor="let validation of validation_messages.cusId">
+                        <mdb-error *ngIf="formCreate.get('cusId').hasError(validation.type) && (formCreate.get('cusId').dirty || formCreate.get('cusId').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('cusId').valid && (formCreate.get('cusId').dirty || formCreate.get('cusId').touched)">Input valid
+                    </mdb-success>
+                </div>
+
+                <div class="md-form mb-6">
+                    <!-- <mdb-icon fas icon="lock" class="prefix grey-text"></mdb-icon> -->
+                    <input type="text" id="cusName" formControlName="cusName" class="form-control" mdbInput mdbValidate>
+                    <label for="cusName">Họ tên</label>
+                    <ng-container *ngFor="let validation of validation_messages.cusName">
+                        <mdb-error *ngIf="formCreate.get('cusName').hasError(validation.type) && (formCreate.get('cusName').dirty || formCreate.get('cusName').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('cusName').valid && (formCreate.get('cusName').dirty || formCreate.get('cusName').touched)">
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-6">
+                    <input type="text" id="cusType" formControlName="cusType" class="form-control" mdbInput mdbValidate>
+                    <label for="cusType">Loại khách hàng</label>
+                    <ng-container *ngFor="let validation of validation_messages.cusType">
+                        <mdb-error *ngIf="formCreate.get('cusType').hasError(validation.type) && (formCreate.get('cusType').dirty || formCreate.get('cusType').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('cusType').valid && (formCreate.get('cusType').dirty || formCreate.get('cusType').touched)">
+                        Input valid
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-6">
+                    <input type="text" id="numberPhone" formControlName="numberPhone" class="form-control" mdbInput mdbValidate>
+                    <label for="numberPhone">Số điện thoại</label>
+                    <ng-container *ngFor="let validation of validation_messages.numberPhone">
+                        <mdb-error *ngIf="formCreate.get('numberPhone').hasError(validation.type) && (formCreate.get('numberPhone').dirty || formCreate.get('numberPhone').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('numberPhone').valid && (formCreate.get('numberPhone').dirty || formCreate.get('numberPhone').touched)">
+                        Input valid
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-6">
+                    <input type="text" id="idCard" formControlName="idCard" class="form-control" mdbInput mdbValidate>
+                    <label for="idCard">CMND</label>
+                    <ng-container *ngFor="let validation of validation_messages.idCard">
+                        <mdb-error *ngIf="formCreate.get('idCard').hasError(validation.type) && (formCreate.get('idCard').dirty || formCreate.get('idCard').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('idCard').valid && (formCreate.get('idCard').dirty || formCreate.get('idCard').touched)">
+                        Input valid
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-6">
+                    <input type="text" id="address" formControlName="address" class="form-control" mdbInput mdbValidate>
+                    <label for="address">Địa chỉ</label>
+                    <ng-container *ngFor="let validation of validation_messages.address">
+                        <mdb-error *ngIf="formCreate.get('address').hasError(validation.type) && (formCreate.get('address').dirty || formCreate.get('address').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('address').valid && (formCreate.get('address').dirty || formCreate.get('address').touched)">
+                        Input valid
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-6">
+                    <input type="email" id="email" formControlName="email" class="form-control" mdbInput mdbValidate>
+                    <label for="email">Email</label>
+                    <ng-container *ngFor="let validation of validation_messages.email">
+                        <mdb-error *ngIf="formCreate.get('email').hasError(validation.type) && (formCreate.get('email').dirty || formCreate.get('email').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('email').valid && (formCreate.get('email').dirty || formCreate.get('email').touched)">
+                        Input valid
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-4">
+                    <input type="date" id="birthday" formControlName="birthday" class="form-control" mdbInput mdbValidate>
+                    <label for="birthday">Ngày sinh</label>
+                    <ng-container *ngFor="let validation of validation_messages.birthday">
+                        <mdb-error *ngIf="formCreate.get('birthday').hasError(validation.type) && (formCreate.get('birthday').dirty || formCreate.get('birthday').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('birthday').valid && (formCreate.get('birthday').dirty || formCreate.get('birthday').touched)">
+                        Input valid
+                    </mdb-success>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button [disabled]="formCreate.invalid" (click)="formCreate.valid? frame.hide(): frame.show()" type="submit" mdbBtn color="default" class="waves-light" mdbWavesEffect type="submit">Thêm</button>
+            </div>
+        </form>
+    </div>
+</div>

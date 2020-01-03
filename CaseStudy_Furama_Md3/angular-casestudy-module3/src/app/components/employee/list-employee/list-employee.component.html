@@ -1,0 +1,34 @@
+<h3>
+    Danh sách nhân viên</h3>
+<div class="md-form input-group input-group-sm mb-3">
+    <app-create-employee (myclick)="getList()"></app-create-employee>
+    <div class="input-group-prepend">
+        <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Search:</span>
+    </div>
+    <input style="width: 50%" [(ngModel)]="search" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-sm">
+</div>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Mã nhân viên</th>
+            <th scope="col">Họ tên</th>
+            <th scope="col">Email</th>
+            <th scope="col">Ngày sinh</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let emp of employees | filter:search | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+        <tr>
+            <th scope="row">{{emp.empId}}</th>
+            <td (click)="detail(emp.id)">{{emp.empName}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.bitrhay | date: 'dd/MM/yyyy'}}</td>
+            <td>
+                <button type="button" mdbBtn type="button" color="red" (click)="delete(emp.id, emp.empName)">Xóa</button>
+                <button type="button" mdbBtn type="button" color="default" (click)="detail(emp.id)">Chi tiết</button>
+                <button type="button" mdbBtn type="button" color="default" (click)="edit(emp.id)">Sửa</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

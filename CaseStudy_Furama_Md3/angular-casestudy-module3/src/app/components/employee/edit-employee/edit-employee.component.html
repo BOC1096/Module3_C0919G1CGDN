@@ -1,0 +1,76 @@
+<form [formGroup]="formEdit" (ngSubmit)="onSubmit(formEdit.value)" class="col-md-6 offset-md-3">
+    <div class="form-group row">
+        <label class="col">
+     Mã nhân viên:
+<input type="text" class="form-control" formControlName = "empId">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('empId').invalid && formEdit.get('empId').touched">
+
+    </div>
+    <div class="form-group row">
+        <label class="col">
+    Họ tên:
+<input type="text" class="form-control" formControlName = "empName">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('empName').invalid && formEdit.get('empName').touched">
+
+    </div>
+    <div class="form-group row">
+        <label class="col">
+    Lương:
+<input type="text" class="form-control" formControlName = "salary">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('salary').invalid && formEdit.get('salary').touched">
+
+    </div>
+    <div class="form-group row">
+        <label class="col">
+        Số điện thoại:
+<input type="text" class="form-control" formControlName = "numberPhone">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('numberPhone').invalid && formEdit.get('numberPhone').touched">
+
+    </div>
+    <div class="form-group row">
+        <label class="col">
+   CMTND:
+<input type="text" class="form-control" formControlName = "idCard">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('idCard').invalid && formEdit.get('idCard').touched">
+
+    </div>
+    <div class="form-group row">
+        <label class="col">
+    Địa chỉ:
+<input type="text" class="form-control" formControlName = "address">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('address').invalid && formEdit.get('address').touched">
+
+    </div>
+    <div class="form-group row">
+        <label class="col">
+    Email:
+      <input type="text" class="form-control" formControlName = "email">
+      </label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('email').invalid && formEdit.get('email').touched">
+
+    </div>
+    <div class="form-group row">
+        <label class="col">
+  Ngày sinh:
+    <input type="date" class="form-control" formControlName = "birthday">
+    </label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('birthday').invalid && formEdit.get('birthday').touched">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">Submit</button>
+    </div>
+</form>

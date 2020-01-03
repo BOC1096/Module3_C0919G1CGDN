@@ -1,0 +1,34 @@
+<h3>
+    Danh sách khách hàng</h3>
+<div class="md-form input-group input-group-sm mb-3">
+    <app-create-customer (myclick)="getList()"></app-create-customer>
+    <div class="input-group-prepend">
+        <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-sm">Search:</span>
+    </div>
+    <input style="width: 50%" [(ngModel)]="search" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-sm">
+</div>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Mã khách hàng</th>
+            <th scope="col">Họ tên</th>
+            <th scope="col">Loại khách hàng</th>
+            <th scope="col">Ngày sinh</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody *ngFor="let cus of customers | filter:search | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+        <tr>
+            <th scope="row">{{cus.cusId}}</th>
+            <td (click)="detail(cus.id)">{{cus.cusName}}</td>
+            <td>{{cus.cusType}}</td>
+            <td>{{cus.birthday | date: 'dd/MM/yyyy'}}</td>
+            <td>
+                <button type="button" mdbBtn type="button" color="red" (click)="delete(cus.id, cus.cusName)">Xóa</button>
+                <button type="button" mdbBtn type="button" color="default" (click)="detail(cus.id)">Chi tiết</button>
+                <button type="button" mdbBtn type="button" color="default" (click)="edit(cus.id)">Sửa</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>

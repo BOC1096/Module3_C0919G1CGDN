@@ -1,0 +1,68 @@
+<form [formGroup]="formEdit" (ngSubmit)="onSubmit(formEdit.value)" class="col-md-6 offset-md-3">
+    <div class="form-group row">
+        <label class="col">
+     Mã dịch vụ:
+<input type="text" class="form-control" formControlName = "serviceId">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('serviceId').invalid && formEdit.get('serviceId').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+    Tên dịch vụ:
+<input type="text" class="form-control" formControlName = "serviceName">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('serviceName').invalid && formEdit.get('serviceName').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+    Diện tích:
+<input type="text" class="form-control" formControlName = "area">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('area').invalid && formEdit.get('area').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+        Số tầng:
+<input type="text" class="form-control" formControlName = "numberFloor">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('numberFloor').invalid && formEdit.get('numberFloor').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+   Gía:
+<input type="text" class="form-control" formControlName = "price">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('price').invalid && formEdit.get('price').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+    Số người tối đa:
+<input type="text" class="form-control" formControlName = "maxPerson">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('maxPerson').invalid && formEdit.get('emmaxPersonail').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+    Status:
+      <select formControlName="status">
+        <option [ngValue]="true">Còn</option>
+        <option [ngValue]="false">Hết</option>
+      </select>
+      </label>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">Submit</button>
+    </div>
+</form>

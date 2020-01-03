@@ -1,0 +1,12 @@
+<div>
+    <h4>Tên dịch vụ: {{service.serviceName}}</h4>
+    <ul>
+        <li>Mã dịch vụ: {{service.serviceId}}</li>
+        <li>Gía: {{service.price}}</li>
+        <li>Số tầng: {{service.numberFloor}}</li>
+        <li>Diện tích: {{service.area}} </li>
+        <li>Số người tối đa: {{service.maxPerson}}</li>
+        <li *ngIf='service.status'>Còn</li>
+        <li *ngIf='!service.status'>Hết</li>
+    </ul>
+</div>

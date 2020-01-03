@@ -1,0 +1,96 @@
+<button id="add" type="button" mdbBtn color="default" rounded="true" data-toggle="modal" data-target="#basicExample" (click)='frame.show(); reset()' mdbWavesEffect>Thêm dịch vụ</button>
+<div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form class="modal-content" [formGroup]="formCreate" (ngSubmit)=onSubmit(formCreate.value)>
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Thêm dịch vụ</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+            </div>
+            <div class="modal-body mx-3">
+                <div class="md-form mb-6">
+                    <!-- <mdb-icon fas icon="envelope" class="prefix grey-text"></mdb-icon> -->
+                    <input type="text" id="serviceId" formControlName="serviceId" class="form-control" mdbInput mdbValidate>
+                    <label for="serviceId">Mã dịch vụ</label>
+                    <ng-container *ngFor="let validation of validation_messages.serviceId">
+                        <mdb-error *ngIf="formCreate.get('serviceId').hasError(validation.type) && (formCreate.get('serviceId').dirty || formCreate.get('serviceId').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('serviceId').valid && (formCreate.get('serviceId').dirty || formCreate.get('serviceId').touched)">
+                    </mdb-success>
+                </div>
+
+                <div class="md-form mb-6">
+                    <!-- <mdb-icon fas icon="lock" class="prefix grey-text"></mdb-icon> -->
+                    <input type="text" id="serviceName" formControlName="serviceName" class="form-control" mdbInput mdbValidate>
+                    <label for="serviceName">Tên dịch vụ</label>
+                    <ng-container *ngFor="let validation of validation_messages.serviceName">
+                        <mdb-error *ngIf="formCreate.get('serviceName').hasError(validation.type) && (formCreate.get('serviceName').dirty || formCreate.get('serviceName').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('serviceName').valid && (formCreate.get('serviceName').dirty || formCreate.get('serviceName').touched)">
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-6">
+                    <input type="text" id="area" formControlName="area" class="form-control" mdbInput mdbValidate>
+                    <label for="area">Diện tích</label>
+                    <ng-container *ngFor="let validation of validation_messages.area">
+                        <mdb-error *ngIf="formCreate.get('area').hasError(validation.type) && (formCreate.get('area').dirty || formCreate.get('area').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('area').valid && (formCreate.get('area').dirty || formCreate.get('area').touched)">
+
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-6">
+                    <input type="text" id="numberFloor" formControlName="numberFloor" class="form-control" mdbInput mdbValidate>
+                    <label for="numberFloor">Số tầng</label>
+                    <ng-container *ngFor="let validation of validation_messages.numberFloor">
+                        <mdb-error *ngIf="formCreate.get('numberFloor').hasError(validation.type) && (formCreate.get('numberFloor').dirty || formCreate.get('numberFloor').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('numberFloor').valid && (formCreate.get('numberFloor').dirty || formCreate.get('numberFloor').touched)">
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-6">
+                    <input type="text" id="maxPerson" formControlName="maxPerson" class="form-control" mdbInput mdbValidate>
+                    <label for="maxPerson">Số người tối đa</label>
+                    <ng-container *ngFor="let validation of validation_messages.maxPerson">
+                        <mdb-error *ngIf="formCreate.get('maxPerson').hasError(validation.type) && (formCreate.get('maxPerson').dirty || formCreate.get('maxPerson').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('maxPerson').valid && (formCreate.get('maxPerson').dirty || formCreate.get('maxPerson').touched)">
+
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-6">
+                    <input type="text" id="price" formControlName="price" class="form-control" mdbInput mdbValidate>
+                    <label for="price">Gía</label>
+                    <ng-container *ngFor="let validation of validation_messages.price">
+                        <mdb-error *ngIf="formCreate.get('price').hasError(validation.type) && (formCreate.get('price').dirty || formCreate.get('price').touched)">
+                            {{validation.message}}
+                        </mdb-error>
+                    </ng-container>
+                    <mdb-success *ngIf="formCreate.get('price').valid && (formCreate.get('price').dirty || formCreate.get('price').touched)">
+
+                    </mdb-success>
+                </div>
+                <div class="md-form mb-4">
+                    <select formControlName="status">
+                     <option [ngValue]="true"> Còn </option>
+                     <option [ngValue]="false"> Hết </option>
+                   </select>
+                </div>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button [disabled]="formCreate.invalid" (click)="formCreate.valid? frame.hide(): frame.show()" type="submit" mdbBtn color="default" class="waves-light" mdbWavesEffect type="submit">Thêm</button>
+            </div>
+        </form>
+    </div>
+</div>

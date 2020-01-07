@@ -1,0 +1,17 @@
+<h3 style="color: rgb(27, 145, 145);">Thêm mới sách</h3>
+<form style="width: 60%;" [formGroup]="formCreate" (ngSubmit)="onSubmit(formCreate.value)">
+    <div class="form-group">
+        <label for="title">Tên sách</label>
+        <input type="text" class="form-control" id="title" formControlName="title">
+    </div>
+    <div class="form-group">
+        <label for="autor">Tên tác giả</label>
+        <input type="text" class="form-control" id="author" formControlName="author">
+    </div>
+    <div class="form-group">
+        <label for="description">Mô tả</label>
+        <input type="text" class="form-control" id="description" formControlName="description">
+    </div>
+    <button type="submit" class="btn btn-info">Thêm</button>
+    <button style="margin-left: 1em;" type="button" (click)="backHome()" class="btn btn-info">Thoát</button>
+</form>

@@ -26,7 +26,8 @@ export class CreateCustomerComponent implements OnInit {
       { type: 'required', message: 'Loại khách không được để trống' },
     ],
     'birthday': [
-      { type: 'required', message: 'Ngày sinh không được để trống' }
+      { type: 'required', message: 'Ngày sinh không được để trống' },
+      {type: 'age', message: 'Tuoi tren 18'}
     ],
     'idCard': [
       { type: 'required', message: 'CMND không được để trống' },
@@ -76,6 +77,8 @@ export class CreateCustomerComponent implements OnInit {
       ])],
       birthday: ['', Validators.compose([
         Validators.required,
+        // tslint:disable-next-line: max-line-length
+        Validators.pattern(/^((2000|2400|2800|(19|2[0-9](0[48]|[2468][048]|[13579][26])))-02-29)$|^(((19|2[0-9])[0-9]{2})-02-(0[1-9]|1[0-9]|2[0-8]))$|^(((19|2[0-9])[0-9]{2})-(0[13578]|10|12)-(0[1-9]|[12][0-9]|3[01]))$|^(((19|2[0-9])[0-9]{2})-(0[469]|11)-(0[1-9]|[12][0-9]|30))$/),
       ])]
     }
     );
@@ -101,5 +104,11 @@ export class CreateCustomerComponent implements OnInit {
   reset() {
     this.formCreate.reset();
   }
+}
+function validatorAge(form: FormControl) {
+  if ((new Date().valueOf() - new Date(form.value).valueOf()) / (365 * 24 * 3600 * 1000) < 18) {
+    return { age: true };
+  }
+  return null;
 }
 

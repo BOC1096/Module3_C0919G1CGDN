@@ -74,6 +74,7 @@ export class CreateContractComponent implements OnInit {
     console.log('aa');
     if (this.end != null && this.start != null && this.service != null) {
       this.total = (this.service.price * (new Date(this.end).valueOf() - new Date(this.start).valueOf()) / (24 * 3600 * 1000));
+      console.log((new Date().valueOf() - new Date(this.start).valueOf()) / (365 * 24 * 3600 * 1000));
     }
   }
   onSubmit(form) {
@@ -95,6 +96,7 @@ export class CreateContractComponent implements OnInit {
     }
   }
   reset() {
+    this.total = 0;
     this.formCreate.reset();
   }
 }
@@ -102,6 +104,12 @@ export class CreateContractComponent implements OnInit {
 function numberValidator(form: FormControl) {
   if (form.value * 1 <= 0) {
     return { number: true };
+  }
+  return null;
+}
+function validatorAge(form: FormControl) {
+  if ((new Date().valueOf() - new Date(form.value).valueOf()) / (365 * 24 * 3600 * 1000) < 18) {
+    return { age: true };
   }
   return null;
 }

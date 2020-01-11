@@ -26,6 +26,7 @@ import { DetailServiceComponent } from './components/service-furama/detail-servi
 import { ContractComponent } from './components/contract/contract/contract.component';
 import { CreateContractComponent } from './components/contract/create-contract/create-contract.component';
 import { HomeContentComponent } from './home-content/home-content.component';
+import { ContractDetailsComponent } from './components/contract-details/contract-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { HomeContentComponent } from './home-content/home-content.component';
     DetailServiceComponent,
     ContractComponent,
     CreateContractComponent,
-    HomeContentComponent
+    HomeContentComponent,
+    ContractDetailsComponent
   ],
   imports: [
     BrowserModule,

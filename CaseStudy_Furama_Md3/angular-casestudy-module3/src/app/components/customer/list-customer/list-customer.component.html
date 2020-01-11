@@ -17,7 +17,7 @@
             <th scope="col"></th>
         </tr>
     </thead>
-    <tbody *ngFor="let cus of customers | filter:search | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+    <tbody *ngFor="let cus of customers | filter:search | paginate: { itemsPerPage: 1, currentPage: p }; let i = index">
         <tr>
             <th scope="row">{{cus.cusId}}</th>
             <td (click)="detail(cus.id)">{{cus.cusName}}</td>

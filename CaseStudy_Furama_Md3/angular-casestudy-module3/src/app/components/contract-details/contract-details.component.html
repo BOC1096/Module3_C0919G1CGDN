@@ -1,0 +1,78 @@
+<form [formGroup]="createForm" (ngSubmit)="onSubmit(createForm.value)" class="col-md-6 offset-md-3">
+    <div class="form-group row">
+        <label class="col">
+   Mã Hợp đồng:
+<select formControlName = "contract">
+  <option *ngFor="let contract of contracts" [ngValue]=" contract">{{contract.id}}</option>
+</select>
+</label>
+    </div>
+    <div class="form-group row">
+        <label class="col">
+  Dịch vụ đi kèm:
+<select formControlName="serviceInclude">
+  <option value="Karaoke">Karaoke</option>
+  <option value="Drink">Drink</option>
+  <option value="Car">Car</option>
+  <option value="food">Food</option>
+</select>
+</label>
+    </div>
+    <div class="form-group row">
+        <label class="col">
+  Số lượng:
+<input type="number" class="form-control" formControlName = "amount">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="createForm.get('amount').invalid && createForm.get('amount').touched">
+        Invalid email!
+    </div>
+    <!-- <div class="form-group row">
+        <label class="col">
+      Số điện thoại:
+<input type="text" class="form-control" formControlName = "numberPhone">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('numberPhone').invalid && formEdit.get('email').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+ CMTND:
+<input type="text" class="form-control" formControlName = "idCard">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('idCard').invalid && formEdit.get('email').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+  Địa chỉ:
+<input type="text" class="form-control" formControlName = "address">
+</label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('address').invalid && formEdit.get('email').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+  Email:
+    <input type="text" class="form-control" formControlName = "email">
+    </label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('email').invalid && formEdit.get('email').touched">
+        Invalid email!
+    </div>
+    <div class="form-group row">
+        <label class="col">
+Ngày sinh:
+  <input type="date" class="form-control" formControlName = "birthday">
+  </label>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="formEdit.get('birthday').invalid && formEdit.get('birthday').touched">
+        Invalid email!
+    </div> -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">Submit</button>
+    </div>
+</form>

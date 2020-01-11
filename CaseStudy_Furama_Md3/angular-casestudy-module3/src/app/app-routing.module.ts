@@ -11,6 +11,7 @@ import { DetailServiceComponent } from './components/service-furama/detail-servi
 import { EditServiceComponent } from './components/service-furama/edit-service/edit-service.component';
 import { ContractComponent } from './components/contract/contract/contract.component';
 import { HomeContentComponent } from './home-content/home-content.component';
+import { ContractDetailsComponent } from './components/contract-details/contract-details.component';
 
 const routes: Routes = [
   { path: 'customer', component: ListCustomerComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'service/:id', component: DetailServiceComponent },
   { path: 'service/edit/:id', component: EditServiceComponent },
   { path: 'contract', component: ContractComponent},
+  { path: 'contractdetail', component: ContractDetailsComponent},
   { path: '', component: HomeContentComponent }
 ];
 

@@ -34,6 +34,7 @@ export class EditCustomerComponent implements OnInit {
   }
   onSubmit(form) {
     if (this.formEdit.valid) {
+      console.log(form.birthday);
       this.customer.cusId = form.cusId;
       this.customer.cusName = form.cusName;
       this.customer.cusType = form.cusType;

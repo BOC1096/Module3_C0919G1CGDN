@@ -7,6 +7,6 @@
         <li>CMTND: {{customer.idCard}} </li>
         <li>Địa chỉ: {{customer.address}}</li>
         <li>Email: {{customer.email}} </li>
-        <li>Ngaỳ sinh: {{customer.birthday}}</li>
+        <li>Ngaỳ sinh: {{customer.birthday | date: 'dd/MM/yyyy'}}</li>
     </ul>
 </div>

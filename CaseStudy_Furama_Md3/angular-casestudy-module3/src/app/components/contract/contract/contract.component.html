@@ -11,19 +11,19 @@
 <table class="table table-hover table-bordered">
     <thead>
         <tr>
+            <th scope="col">Tên khách hàng</th>
             <th scope="col">Ngày bắt đầu</th>
             <th scope="col">Ngày kết thúc</th>
             <th scope="col">Tên dịch vụ</th>
-            <th scope="col">Tên khách hàng</th>
             <th scope="col">Tổng tiền</th>
         </tr>
     </thead>
     <tbody *ngFor="let cus of customerContracts | filter:search | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
         <tr>
-            <th scope="row">{{cus.start}}</th>
-            <td>{{cus.end}}</td>
+            <th scope="row">{{cus.customer.cusName}}</th>
+            <td>{{cus.start | date: 'dd/MM/yyyy'}}</td>
+            <td>{{cus.end | date: 'dd/MM/yyyy'}}</td>
             <td>{{cus.service.serviceName}}</td>
-            <td>{{cus.customer.cusName}}</td>
             <td>
                 {{cus.total}}
                 <!-- <button type="button" mdbBtn type="button" color="red" (click)="delete(emp.id, emp.empName)">Xóa</button>
